@@ -7,6 +7,7 @@ from curtsies import Input
 class Keyboard_press_node(Node):
     def __init__(self):
         super().__init__('keyboard_press')
+        # Se crea publicador para mandar por el topico la tecla presionada
         self.keyboard_publisher = self.create_publisher(String, "/keyboard_press",10)
         self.get_logger().info('Keyboard_press node started. Press WASD to move the robot')
 
